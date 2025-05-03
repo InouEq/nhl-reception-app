@@ -10,7 +10,6 @@ const QRScanner = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const streamRef = useRef(null);
 
-  // QRコードをスキャンしてデータベースを更新する関数
   const handleScanResult = async (data) => {
     try {
       const { error } = await supabase
@@ -29,7 +28,6 @@ const QRScanner = () => {
     }
   };
 
-  // カメラを起動する関数
   const startCamera = async () => {
     try {
       if (streamRef.current) {
@@ -55,7 +53,6 @@ const QRScanner = () => {
     }
   };
 
-  // QRコードをスキャンする関数
   const scanQRCode = () => {
     if (videoRef.current && canvasRef.current) {
       const video = videoRef.current;
@@ -86,7 +83,6 @@ const QRScanner = () => {
     }
   };
 
-  // コンポーネントがマウントされたときにカメラを起動
   useEffect(() => {
     startCamera();
 

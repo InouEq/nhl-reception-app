@@ -1,12 +1,12 @@
 // Admin.jsx
 import React, { useState, useEffect } from 'react';
-import QRScanner from './QrScanner'; // QRScannerコンポーネントをインポート
+import QRScanner from './QrScanner';
 
 const Admin = () => {
-  const [viewScanner, setViewScanner] = useState(false); // スキャナー表示を切り替えるためのstate
+  const [viewScanner, setViewScanner] = useState(false);
 
   useEffect(() => {
-    // 必要に応じてadminの初期化処理を行います
+    // 必要に応じてadminの初期化処理
   }, []);
 
   return (
